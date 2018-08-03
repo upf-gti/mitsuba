@@ -20,6 +20,12 @@ plugins += env.SharedLibrary('multichannel', ['misc/multichannel.cpp'])
 plugins += env.SharedLibrary('field', ['misc/field.cpp'])
 plugins += env.SharedLibrary('motion', ['misc/motion.cpp'])
 
+# My Integrators
+plugins += env.SharedLibrary('depth', ['my_integrators/depthIntegrator.cpp'])
+plugins += env.SharedLibrary('normals', ['my_integrators/normalsIntegrator.cpp'])
+plugins += env.SharedLibrary('my_direct', ['my_integrators/myDirect.cpp'])
+plugins += env.SharedLibrary('my_path', ['my_integrators/myPath.cpp'])
+
 # Bidirectional techniques
 bidirEnv = env.Clone()
 bidirEnv.Append(LIBS=['mitsuba-bidir'])
